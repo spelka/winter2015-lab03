@@ -1,14 +1,9 @@
 <?php
 
 /**
- * Our homepage. Show a table of all the author pictures. Clicking on one should show their quote.
- * Our quotes model has been autoloaded, because we use it everywhere.
+ * Shows the second quote
  * 
- * Contains method shucks(), which displays the second quote
- * 
- * Default controller for this website
- * 
- * controllers/Welcome.php
+ * controllers/lock/em/up/Welcome.php
  *
  * ------------------------------------------------------------------------
  */
@@ -23,27 +18,10 @@ class Welcome extends Application {
     //-------------------------------------------------------------
 
     /**
-     * Displays the homepage
-     */
-    function index()
-    {
-        $this->data['pagebody'] = 'homepage';    // this is the view we want shown
-        // build the list of authors, to pass on to our view
-        $source = $this->quotes->all();
-        $authors = array();
-        foreach ($source as $record) {
-            $authors[] = array('who' => $record['who'], 'mug' => $record['mug'], 'href' => $record['where']);
-        }
-        $this->data['authors'] = $authors;
-
-        $this->render();
-    }
-    
-    /**
      * Returns the 2nd quote in Quotes.php and and displays it in a 'justone'
      * view template
      */
-    function shucks()
+    function index()
     {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
 
@@ -61,4 +39,4 @@ class Welcome extends Application {
 }
 
 /* End of file Welcome.php */
-/* Location: application/controllers/Welcome.php */
+/* Location: application/controllers/controllers/lock/em/up/Welcome.php */

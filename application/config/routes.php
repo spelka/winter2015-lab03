@@ -41,6 +41,15 @@
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
 
+//$route['USER_INPUT'] = "OBFUSCATION VIA INTERNAL REFERENCE";
+$route['sleep'] = "first/zzz";
+$route['lock/*'] = "welcome/shucks";
+//$route['lock/(:any)'] = "welcome/shucks";
+$route['show/(:num)'] = "first/gimme/3";
+$route['dunno'] = "guess";
+$route['[a-zA-Z]{4}/bingo'] = "bingo";
+//$route['comp[0-9]{4}/(:any)'] = "bingo/wisdom";
+$route['comp[0-9]{4}/.*'] = 'bingo/wisdom';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
